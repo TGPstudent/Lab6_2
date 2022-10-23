@@ -11,9 +11,9 @@ int main(void)
 	unsigned int i, j;
 	int a[7][7], min;
 	srand(time(0));
-	for (int i = 0; i <= (n - 1); i++)
+	for (i = 0; i <= (n - 1); i++)
 	{
-		for (int j = 0; j <= (n - 1); j++)
+		for (j = 0; j <= (n - 1); j++)
 		{
 			a[i][j] = Low + rand() % (High - Low + 1);
 		}
@@ -21,19 +21,19 @@ int main(void)
 	system("cls");
 	min = 0;
 
-	for (int i = 0; i <= (n - 1); i++)
+	for (i = 0; i <= (n - 1); i++)
 	{
-		for (int j = 0; j <= (n - 1); j++)
+		for (j = 0; j <= (n - 1); j++)
 		{
 			if (i+j<n-1 && min > a[i][j]) min = a[i][j];
 		}
 	}
-		printf("\n Введено матрицю: \n \n");
-	for (int i = 0; i <= (n - 1); i++)
+		printf("\n Згенерована матриця: \n \n");
+	for (i = 0; i <= (n - 1); i++)
 	{
 		if (i != 3) printf("\t | ");
 		if (i == 3) printf(" A[%d,%d]= | ", n, n);
-		for (int j = 0; j <= (n - 1); j++)
+		for (j = 0; j <= (n - 1); j++)
 		{
 			printf("%d\t", a[i][j]);
 		}
